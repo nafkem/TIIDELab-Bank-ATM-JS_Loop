@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>USSD Transaction-For Loop</title>
+</head>
+<body>
+  <!-- USSD Transaction -->
+  <script>
+    alert("Welcome to USSD Transaction!");
+
+    let accountBalance = 3000; 
+    let maxTransactions = 3;   
+
+    for (let transaction = 1; transaction <= maxTransactions; transaction++) {
+      alert(`Transaction ${transaction} - Account Balance: $${accountBalance}`);
+
+      let amount = +prompt("Enter amount for transaction:");
+      
+      if (amount <= accountBalance) {
+        accountBalance -= amount;
+        alert(`Transaction successful! You've spent $${amount}. New balance: $${accountBalance}`);
+      } 
+      else {
+        alert("Insufficient funds. Please enter a valid amount.");
+      }
+
+      let continueTransaction = prompt("Do you want to perform another transaction? (yes/no)");
+
+      if (continueTransaction() !== "yes") {
+        alert("Thank you for using USSD Transaction. Have a great day!");
+        break;
+      }
+    }
+  </script>
+</body>
+</html>
