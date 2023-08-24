@@ -1,0 +1,25 @@
+body{
+    background-color:rgba(8, 8, 42, 0.571);
+    color:white;
+}
+
+header{
+    font-size: 20px;
+    display:flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+img{
+    height: 700px;
+    width: 700px;
+}
+button{
+    background-color: rgb(214, 23, 23);
+    color: white;
+    font-size: 20px;
+    width: 200px;
+    padding: 5px;
+}
